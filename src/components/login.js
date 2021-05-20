@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import {useFormik} from "formik"
 import * as Yup from "yup"
 import axios from "axios"
@@ -6,14 +6,11 @@ import axios from "axios"
 
 export default function Login({handleToken}) {
     
-    
-    
-    
     const validationSchema=Yup.object({
         email:Yup.string().email("put a valid email").required("required!!"),
         password:Yup.string().min(5).max(15).required("required!!")
     })
-
+    
     const formik=useFormik({
 
         initialValues:{
@@ -21,12 +18,7 @@ export default function Login({handleToken}) {
             password:""
         },
         onSubmit:function (values){
-
-
-            
-            
-            
-
+    
             const tokenUrl="http://challenge-react.alkemy.org/"
             axios.post(tokenUrl,{
                 email:values.email,
@@ -38,19 +30,8 @@ export default function Login({handleToken}) {
             
         },
         
-
         validationSchema
-        
     })
-
-    
-
-
-
-
-
-    
-
 
     return (
         <div className="container">
@@ -75,3 +56,13 @@ export default function Login({handleToken}) {
         </div>
     )
 }
+
+
+
+
+
+
+    
+
+
+    

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import {CharacterContext} from "../home"
+import {CharacterContext} from "./home"
 
 
 export default function PowerstatsSum() {
@@ -11,12 +11,12 @@ export default function PowerstatsSum() {
 
 
     useEffect(()=>{ 
-
-        
-
         handleChangeInCualities(team)
         
     },[team])
+        
+
+     
 
     function handleChangeInCualities(x){
 
@@ -38,24 +38,15 @@ export default function PowerstatsSum() {
             cualitiesTwo.forEach(c=>newCualities[c]=newCualities[c] + Number(d.appearance[c][1].split(" ")[0]))
             
          })
-
         
-
-
          setTeamCualities(newCualities)
-
         
-        
-    
-        
-       
-         
-        
-
-        
-
     }
 
+        
+
+
+     
    
 
     return (
@@ -77,19 +68,19 @@ export default function PowerstatsSum() {
                             cualitiesTwo.map(d=><ul key={d}>{d}: {teamCualitiesSum[d]}</ul>)
                         }
                         </div>
-
+                
+                    </div>
+                </div>
+        </div>
+    )
+}        
+         
                        
                 
                     
         
-                
-                    </div>
-                       
-                    
-                </div>
-                
 
+                    
+ 
                 
-        </div>
-    )
-}
+ 

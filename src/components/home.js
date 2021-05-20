@@ -1,22 +1,14 @@
 import React, {createContext, useState} from 'react'
-import SearchBox from "./components/searchBox";
-import TeamDisplay from "./components/teamDisplay";
-import PowerstatsSum from "./components/powerstatsSum";
+import SearchBox from "./searchBox";
+import TeamDisplay from "./teamDisplay";
+import PowerstatsSum from "./powerstatsSum";
 
 
 export const CharacterContext=createContext()
 
 export default function Home({handleToken}) {
 
-
-
-   
-
-    const [team,setTeam]=useState([])
-
-  
-  
-  
+  const [team,setTeam]=useState([])
   function addCharacter(x){
     
     
@@ -41,9 +33,6 @@ export default function Home({handleToken}) {
       }
 
     }
-
-    
-   
   }
 
   function deleteCharacter(x){
@@ -53,22 +42,19 @@ export default function Home({handleToken}) {
 
    }
 
-   const contextObj={
+  const contextObj={
      team,
      addCharacter,
      deleteCharacter
-   }
+  }
 
-    function logOut(){
-        localStorage.clear()
-        handleToken()
-       
-        
-    }
+  function logOut(){
+      localStorage.clear()
+      handleToken()
+  }
 
-    function homeCheckToken(token){
+  function homeCheckToken(token){
       
-
       if(token){
         return(
           <div>
@@ -79,10 +65,7 @@ export default function Home({handleToken}) {
                   <SearchBox/>
                   <PowerstatsSum/>
                   <TeamDisplay/>
-         
-  
-  
-  
+                  
               </CharacterContext.Provider>
           </div>
         )
@@ -91,13 +74,12 @@ export default function Home({handleToken}) {
       else{
         <h1>You have to Log in whit the correct email and password</h1>
       }
-    }
+  }
 
 
     return (
         <div className="container">
-            
-            
+          
           {homeCheckToken(localStorage.getItem("challengeToken"))}
             
         </div>

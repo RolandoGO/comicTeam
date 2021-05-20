@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react'
-import {CharacterContext} from "../home"
+import {CharacterContext} from "./home"
 
 export default function TeamHero({herosData}) {
     
@@ -10,12 +10,8 @@ export default function TeamHero({herosData}) {
 
     const {deleteCharacter}=useContext(CharacterContext)
 
-    
-    
-
-
     return (
-        <div key={herosData.id} id="teamCard" className="col-sm-2"  >
+        <div  id="teamCard" className="col-sm-2"  >
             
             <div className="d-flex">
                 <div onClick={()=>deleteCharacter(herosData)} id="characterAdd" className="bg-danger"><span>x</span></div>
@@ -37,15 +33,20 @@ export default function TeamHero({herosData}) {
 
             <div  className="col-sm-12" id="appearence" style={{wordWrap: "break-word"}}>{herosData.work.occupation}</div>
 
-            {apperanceCualities.map(d=><div className="col-sm-12" id="appearence" style={{wordWrap: "break-word"}}>{typeof herosData.appearance[d]!==typeof []?d+": "+herosData.appearance[d]:d+": "+herosData.appearance[d][1]}</div>)}
+            {apperanceCualities.map(d=><div key={d} className="col-sm-12" id="appearence" style={{wordWrap: "break-word"}}>{typeof herosData.appearance[d]!==typeof []?d+": "+herosData.appearance[d]:d+": "+herosData.appearance[d][1]}</div>)}
 
-            
-            
-
-           
+                       
            </div>
            
         </div>
     )
     
 }
+            
+
+
+
+    
+
+
+    

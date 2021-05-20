@@ -1,8 +1,5 @@
-import React, { useState,useContext } from 'react'
-import {CharacterContext} from "../home"
-
-
-
+import React, {useContext } from 'react'
+import {CharacterContext} from "./home"
 
 
 export default function HeroCard({herosData}) {
@@ -11,10 +8,7 @@ export default function HeroCard({herosData}) {
 
     const {addCharacter}=useContext(CharacterContext)
     
-
     
-
-
     return (
         <div key={herosData.id} id="cardShadow" className="col-sm-2 d-flex"  >
             
@@ -33,3 +27,7 @@ export default function HeroCard({herosData}) {
         </div>
     )
 }
+    
+
+
+    

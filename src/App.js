@@ -1,7 +1,7 @@
 
 import React, { useState } from "react"
-import Home from "./home";
-import Login from "./login";
+import Home from "./components/home";
+import Login from "./components/login";
 
 
 
@@ -26,7 +26,7 @@ function App() {
   
   
   return (
-    <div style={{width:"100%vw"}} >
+    <div style={{width:"100vw"}} >
 
       {localStorage.getItem("challengeToken")!==null?<Home handleToken={handleToken}/>:<Login handleToken={handleToken}/>}
       

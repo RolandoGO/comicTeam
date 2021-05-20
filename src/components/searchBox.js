@@ -1,5 +1,4 @@
-import React from 'react'
-import { useRef, useState } from "react";
+import React,{ useState } from 'react'
 import HeroCard from './heroCrad';
 import axios from "axios"
 import {useFormik} from "formik"
@@ -43,11 +42,7 @@ export default function SearchBox() {
 
         setHero(null)
         setProgres(true)
-        
         setError(null)
-
-
-
 
         axios.get(`https://www.superheroapi.com/api.php/10158473030413985/search/${name}`)
         .then(d=>{
@@ -68,11 +63,7 @@ export default function SearchBox() {
             setError("error de conexion o no se encontro el recurso")
             
         })
-        
-        
-
     }
-
 
     return (
             
@@ -105,7 +96,10 @@ export default function SearchBox() {
                 {hero&&hero.map(h=><HeroCard herosData={h} key={h.id}/>)}
                 </div>
                
-                
+            </div>
+    )
+}
+
 
                 
                 
@@ -113,6 +107,9 @@ export default function SearchBox() {
 
            
             
-            </div>
-    )
-}
+
+
+
+        
+
+   

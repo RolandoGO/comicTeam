@@ -1,38 +1,19 @@
+import React, { useState, useEffect } from "react";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import { CharacterContext } from "./context/context";
+import { useCharacter } from "./hooks/useCharacter";
+import { useLogin } from "./hooks/useLogin";
 
-import React, { useState } from "react"
-import Home from "./components/home";
-import Login from "./components/login";
+const App = () => {
+	const characterHook = useCharacter();
+	const { isTokenExist, setIsTokenExist, logOut } = useLogin();
 
+	return (
+		<CharacterContext.Provider value={characterHook}>
+			<div className="container">{isTokenExist ? <Home logOut={logOut} /> : <Login setIsTokenExist={setIsTokenExist} />}</div>;
+		</CharacterContext.Provider>
+	);
+};
 
-
-
-
-
-
-
-
-
-
-function App() {
-
-  
-
-  const [token,setToken]=useState(false)
-  
-  function handleToken(x){
-    setToken(!token)
-    
-  }
-  
-  
-  return (
-    <div style={{width:"100vw"}} >
-
-      {localStorage.getItem("challengeToken")!==null?<Home handleToken={handleToken}/>:<Login handleToken={handleToken}/>}
-      
-     
-    </div>
-  );
-}
-document.body.style = 'background:#FEDE00';
 export default App;

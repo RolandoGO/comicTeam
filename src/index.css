@@ -1,97 +1,79 @@
-
-
-
-
-
-
-
-#cardShadow{
-    transition: ease .5s;
-    height: 200px;
-    width: 270px;
-    padding: 10px;
-    
-}
-#cardShadow #characterAdd{
-    height: 20px;
-    width: 20px;
-    font-size: 20px;
-    
-    color: aliceblue;
-    border-radius: 50%;
-    line-height: 13px;
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    left: 230px;
-    text-align: center;
-    
-    
-    
+body {
+	background-color: #fede00;
 }
 
-
-#cardShadow:hover{
-
-    transform: translate(0,-5px);
-    box-shadow: 2px 2px 2px 1px rgba(12, 12, 12, 0.877);
-    
-
-}
-#cardShadow:hover #characterAdd{
-    display: block;
+.app-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-
-
-
-#teamCard{
-    transition: ease .5s;
-    height: 200px;
-    width: 270px;
-    padding: 10px;
-    background-color: rgb(206, 203, 24);
-    
+#cardShadow {
+	transition: ease 0.5s;
+	height: 200px;
+	width: 270px;
+	padding: 10px;
 }
-#teamCard #characterAdd{
-    height: 20px;
-    width: 20px;
-    font-size: 20px;
-    
-    color: aliceblue;
-    border-radius: 50%;
-    line-height: 13px;
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    left: 230px;
-    text-align: center;
-    
-    
-    
+#cardShadow #characterAdd {
+	height: 20px;
+	width: 20px;
+	font-size: 20px;
+
+	color: aliceblue;
+	border-radius: 50%;
+	line-height: 13px;
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	left: 230px;
+	text-align: center;
 }
 
-#appearence{
-   
-    opacity: 0;
-    
-    transition: ease .5s;
-    
-    
-    
+#cardShadow:hover {
+	transform: translate(0, -5px);
+	box-shadow: 2px 2px 2px 1px rgba(12, 12, 12, 0.877);
 }
-#teamCard:hover{
-
-    transform: translate(0,-5px);
-    box-shadow: 2px 2px 2px 1px rgba(12, 12, 12, 0.877);
-    height: 370px;
-
-}
-#teamCard:hover #appearence{
-    opacity: 1;
-    
-}
-#teamCard:hover #characterAdd{
-    display: block;
+#cardShadow:hover #characterAdd {
+	display: block;
 }
 
+#teamCard {
+	transition: ease 0.5s;
+	height: 200px;
+	width: 270px;
+	padding: 10px;
+	background-color: rgb(206, 203, 24);
+}
+#teamCard #characterAdd {
+	height: 20px;
+	width: 20px;
+	font-size: 20px;
+
+	color: aliceblue;
+	border-radius: 50%;
+	line-height: 13px;
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	left: 230px;
+	text-align: center;
+}
+
+#appearence {
+	opacity: 0;
+
+	transition: ease 0.5s;
+}
+#teamCard:hover {
+	transform: translate(0, -5px);
+	box-shadow: 2px 2px 2px 1px rgba(12, 12, 12, 0.877);
+	height: 370px;
+}
+#teamCard:hover #appearence {
+	opacity: 1;
+}
+#teamCard:hover #characterAdd {
+	display: block;
+}

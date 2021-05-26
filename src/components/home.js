@@ -1,7 +1,7 @@
 import React from "react";
-import SearchBox from "./searchBox";
-import TeamDisplay from "./teamDisplay";
-import PowerstatsSum from "./powerstatsSum";
+import SearchBox from "./SearchBox";
+import TeamDisplay from "./TeamDisplay";
+import PowerstatsSum from "./PowerstatsSum";
 
 const Home = ({ logOut }) => {
 	return (

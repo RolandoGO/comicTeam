@@ -31,7 +31,7 @@ export default function SearchBox() {
 			}
 			else{
 
-				console.log(characterResponse.results)
+				
 
 				setHero(characterResponse.results);
 				setProgress(false);

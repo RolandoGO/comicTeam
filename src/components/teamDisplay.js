@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CharacterContext } from "../context/context";
-import TeamHero from "./teamCard";
+import TeamHero from "./TeamCard";
 
 export default function TeamDisplay() {
 	const { team } = useContext(CharacterContext);

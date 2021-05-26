@@ -3,12 +3,10 @@ import SearchBox from "./SearchBox";
 import TeamDisplay from "./TeamDisplay";
 import PowerstatsSum from "./PowerstatsSum";
 
-const Home = ({ logOut }) => {
+const Home = () => {
 	return (
 		<div className="container">
-			<button className="btn btn-dark mt-2" onClick={logOut}>
-				Log Out
-			</button>
+			
 			<>
 				<SearchBox />
 				<PowerstatsSum />
